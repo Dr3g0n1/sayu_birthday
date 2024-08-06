@@ -56,6 +56,20 @@
     <div class="content">
         <h1>Willkommen auf der Home-Seite</h1>
         <p>Dies ist der Inhalt der Home-Seite meiner Website.</p>
+        <div class="circle-container">
+            <div class="circle" onmouseover="showMessage('message1')" onmouseout="hideMessages()" onclick="showMessage('message1')"></div>
+            <div class="circle" onmouseover="showMessage('message2')" onmouseout="hideMessages()" onclick="showMessage('message2')"></div>
+        </div>
+        <div class="message" id="message1">Why?</div>
+        <div class="message" id="message2">This should work!</div>
     </div>
+
+    <script>
+        function showMessage(messageId) {
+            document.getElementById('message1').style.display = 'none';
+            document.getElementById('message2').style.display = 'none';
+            document.getElementById(messageId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
