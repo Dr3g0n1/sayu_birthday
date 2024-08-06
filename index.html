@@ -87,8 +87,8 @@
         <h1>Willkommen auf meiner Startseite</h1>
         <p>Dies ist die Startseite meiner Website.</p>
         <div class="circle-container">
-            <div class="circle" onclick="showMessage('message1')"></div>
-            <div class="circle" onclick="showMessage('message2')"></div>
+            <div class="circle" onmouseover="showMessage('message1')" onmouseout="hideMessages()" onclick="showMessage('message1')"></div>
+            <div class="circle" onmouseover="showMessage('message2')" onmouseout="hideMessages()" onclick="showMessage('message2')"></div>
         </div>
         <div class="message" id="message1">Why?</div>
         <div class="message" id="message2">This should work!</div>
