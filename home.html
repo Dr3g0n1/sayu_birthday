@@ -110,6 +110,26 @@
             border-radius: 5px;
         }
 
+        .mobile-nav {
+            display: none;
+            background-color: rgba(128, 128, 128, 0.9);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .mobile-nav a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            background-color: #575757;
+        }
+
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
@@ -137,6 +157,10 @@
                 left: 0;
                 transform: none;
             }
+
+            .mobile-nav {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -152,6 +176,13 @@
     </div>
     <div id="main">
         <button class="openbtn" onclick="openNav()">&#9776; Menü</button>
+        <div class="mobile-nav">
+            <a href="index.html">Index</a>
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <div class="content">
             <h1>Willkommen auf der Home-Seite</h1>
             <p>Dies ist der Inhalt der Home-Seite meiner Website.</p>
