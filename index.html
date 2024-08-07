@@ -168,6 +168,31 @@
             .mobile-nav {
                 display: block;
             }
+
+        .rotate-notice {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        @media (orientation: portrait) {
+            .rotate-notice {
+                display: block;
+            }
+
+            .content, .mobile-nav, .openbtn {
+                display: none;
+            }
+        }
+            
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -202,6 +227,10 @@
             <div class="message" id="message1">Why?</div>
             <div class="message" id="message2">This should work!</div>
         </div>
+    </div>
+
+    <div class="rotate-notice">
+        Bitte drehen Sie Ihr Gerät in die horizontale Ausrichtung.
     </div>
 
     <script>
