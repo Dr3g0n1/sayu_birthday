@@ -88,8 +88,8 @@
         <h1>Willkommen auf meiner Startseite</h1>
         <p>Dies ist die Startseite meiner Website.</p>
         <div class="circle-container">
-            <div class="circle" onmouseover="showMessage('message1')" onmouseout="hideMessages()" onclick="showMessage('message1')"></div>
-            <div class="circle" onmouseover="showMessage('message2')" onmouseout="hideMessages()" onclick="showMessage('message2')"></div>
+            <div class="circle" onmouseover="showMessage('message1')" onmouseout="hideMessages('message1')" onclick="showMessage('message1')"></div>
+            <div class="circle" onmouseover="showMessage('message2')" onmouseout="hideMessages('message2')" onclick="showMessage('message2')"></div>
         </div>
         <div class="message" id="message1">Why?</div>
         <div class="message" id="message2">This should work!</div>
@@ -97,9 +97,11 @@
 
     <script>
         function showMessage(messageId) {
-            document.getElementById('message1').style.display = 'none';
-            document.getElementById('message2').style.display = 'none';
             document.getElementById(messageId).style.display = 'block';
+        }
+
+        function hideMessage(messageId) {
+            document.getElementById(messageId).style.display = 'none';
         }
     </script>
 </body>
