@@ -109,14 +109,12 @@
     </div>
 
     <script>
-        function hideMessage() {
-            document.getElementById('message1').style.display = 'none';
-            document.getElementById('message2').style.display = 'none';
+        function showMessage(messageId) {
+            document.getElementById(messageId).style.display = 'block';
         }
 
-        function showMessage(messageId) {
-            hideMessages();
-            document.getElementById(messageId).style.display = 'block';
+        function hideMessage(messageId) {
+            document.getElementById(messageId).style.display = 'none';
         }
     </script>
 </body>
