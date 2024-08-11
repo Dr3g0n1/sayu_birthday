@@ -244,6 +244,8 @@
     <div class="rotate-popup">
         <div class="rotate-popup-content">
             Bitte drehen Sie Ihr Gerät in die horizontale Ausrichtung.
+            <br>
+            <button onclick="closePopup()">Okay</button>
         </div>
     </div>
 
@@ -264,6 +266,10 @@
 
         function hideMessage(messageId) {
             document.getElementById(messageId).style.display = 'none';
+        }
+
+        function closePopup() {
+            document.getElementById('rotatePopup').style.display = 'none';
         }
     </script>
 </body>
