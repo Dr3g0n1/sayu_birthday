@@ -139,8 +139,31 @@
         .mobile-nav a:hover {
             background-color: #575757;
         }
+        
+        .rotate-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
 
-        @media (max-width: 768px) {
+        .rotate-popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        @media (orientation: portrait) and (max-width: 768px) {
             body {
                 background-attachment: fixed; /* Background image fixed */
             }
@@ -174,45 +197,6 @@
                 display: block;
             }
 
-        .rotate-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .rotate-popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
-
-        @media (orientation: portrait) and (max-width: 399px) {
-            .rotate-popup {
-                display: block;
-            }
-
-            .content, .mobile-nav, .openbtn {
-                display: none;
-            }
-
-        .rotate-popup,
-        .rotate-popup-content {
-            display: none;
-        }
-        
-        /* Popup nur auf Mobilgeräten im Portraitmodus anzeigen */
-        @media (orientation: portrait) and (max-width: 399px) {
             .rotate-popup,
             .rotate-popup-content {
                 display: block;
@@ -222,9 +206,10 @@
                 display: none;
             }
         }
+
         
         /* Sicherstellen, dass das Popup und der Inhalt auf größeren Bildschirmen versteckt bleibt */
-        @media (min-width: 400px) {
+        @media (min-width: 769px) {
             .rotate-popup,
             .rotate-popup-content {
                 display: none;
