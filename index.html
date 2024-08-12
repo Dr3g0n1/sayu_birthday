@@ -206,13 +206,29 @@
                 display: none;
             }
 
-        @media (min-width: 769px) {
-            .rotate-popup-content,
-            .rotate-popup {
+        .rotate-popup,
+        .rotate-popup-content {
+            display: none;
+        }
+        
+        /* Popup nur auf Mobilgeräten im Portraitmodus anzeigen */
+        @media (orientation: portrait) and (max-width: 768px) {
+            .rotate-popup,
+            .rotate-popup-content {
+                display: block;
+            }
+        
+            .content, .mobile-nav, .openbtn {
                 display: none;
             }
-            
         }
+        
+        /* Sicherstellen, dass das Popup und der Inhalt auf größeren Bildschirmen versteckt bleibt */
+        @media (min-width: 769px) {
+            .rotate-popup,
+            .rotate-popup-content {
+                display: none;
+    }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="orientation" content="landscape">
@@ -279,7 +295,7 @@ You have blasted through 100k Twitch and YouTube Subscribers and you have earned
         }
 
         function closePopup() {
-            document.getElementById('rotatePopup').style.display = 'none';
+            document.querySelector('.rotate-popup').style.display = 'none';
         }
     </script>
 </body>
