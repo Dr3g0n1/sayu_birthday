@@ -197,7 +197,7 @@
             border-radius: 10px;
         }
 
-        @media (orientation: portrait) and (max-width: 768px) {
+        @media (orientation: portrait) and (max-width: 399px) {
             .rotate-popup {
                 display: block;
             }
@@ -212,7 +212,7 @@
         }
         
         /* Popup nur auf Mobilgeräten im Portraitmodus anzeigen */
-        @media (orientation: portrait) and (max-width: 768px) {
+        @media (orientation: portrait) and (max-width: 399px) {
             .rotate-popup,
             .rotate-popup-content {
                 display: block;
@@ -224,7 +224,7 @@
         }
         
         /* Sicherstellen, dass das Popup und der Inhalt auf größeren Bildschirmen versteckt bleibt */
-        @media (min-width: 769px) {
+        @media (min-width: 400px) {
             .rotate-popup,
             .rotate-popup-content {
                 display: none;
