@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     toggleButton.addEventListener('click', function() {
         nachrichtenFenster.classList.toggle('hidden');
-        showNachricht(currentIndex);
+
+        if (!nachrichtenFenster.classList.contains('hidden')) {
+            showNachricht(currentIndex);
+        }
     });
 
     prevButton.addEventListener('click', function() {
