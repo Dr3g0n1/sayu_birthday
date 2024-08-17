@@ -174,7 +174,7 @@
             border-radius: 10px;
         }
 
-        @media (orientation: portrait) and (max-width: 900px) {
+        @media (max-width: 768px) {
             body {
                 background-attachment: fixed; /* Background image fixed */
             }
@@ -205,25 +205,11 @@
             }
 
             .mobile-nav {
-                display: block;
-            }
-
-            .rotate-popup,
-            .rotate-popup-content {
-                display: block;
-            }
-        
-            .content, .mobile-nav, .openbtn {
                 display: none;
             }
         }
 
         
-        /* Sicherstellen, dass das Popup und der Inhalt auf größeren Bildschirmen versteckt bleibt */
-        @media (min-width: 769px) {
-            .rotate-popup,
-            .rotate-popup-content {
-                display: none;
     }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
