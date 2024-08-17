@@ -224,6 +224,43 @@
                 display: none;
             }
         }
+
+        .hidden {
+            display: none;
+        }
+        
+        #nachrichtenFenster {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            padding: 10px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        #nachrichtenContainer {
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .nachricht {
+            display: none;
+            font-size: 18px;
+        }
+        
+        .nachricht.active {
+            display: block;
+        }
+        
+        #toggleButton, #prevButton, #nextButton {
+            cursor: pointer;
+        }
+            
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -250,27 +287,35 @@
             <a href="contact.html">Oreo</a>
             <a href="extra.html">TanukiMimi</a>
         </div>
-        <div class="content">
-            <h1></h1>
-            <p>Image created by b_yell0w</p>
-            <div class="circle-container">
-                <div id="circle1" class="circle" onmouseover="showMessage('message1')" onmouseout="hideMessage('message1')" onclick="showMessage('message1')"></div>
-                <div id="circle2" class="circle" onmouseover="showMessage('message2')" onmouseout="hideMessage('message2')" onclick="showMessage('message2')"></div>
-                <div id="circle3" class="circle" onmouseover="showMessage('message3')" onmouseout="hideMessage('message3')" onclick="showMessage('message3')"></div>
-                <div id="circle4" class="circle" onmouseover="showMessage('message4')" onmouseout="hideMessage('message4')" onclick="showMessage('message4')"></div>
-                <div id="circle5" class="circle" onmouseover="showMessage('message5')" onmouseout="hideMessage('message5')" onclick="showMessage('message5')"></div>
-                <div id="circle6" class="circle" onmouseover="showMessage('message6')" onmouseout="hideMessage('message6')" onclick="showMessage('message6')"></div>
+        <button id="toggleButton">Show Messages</button>
+
+        <div id="nachrichtenFenster" class="hidden">
+            <div id="nachrichtenContainer">
+                <div class="nachricht" style="text-align: justify; white-space-collapse: collapse; padding: 4px 16px; display: none;">
+    <p style="text-align: center;">Happy Birthday Sayu!</p>
+    <p>On this blessed day, I wish you good health, happiness, a peaceful sky over your head, and that all your dreams come true! Its the first birthday of yours that I celebrate with you and the others Sincroknights! And I hope that we all will celebrate your birthday many more times together! \ (^w^)/</p>
+    <p>I never understood the concept of Oshi or KamiOshi before discovering you, but I can now say that Sayu Sincronisity is my KamiOshi. I never felt like part of a fandom or community before being welcomed by your community and now I can say that I am a Sincroknight.</p>
+    <p>I may not write a lot in chat but I watch all of the streams because you are so fun. I hope to overcome my shyness and write more in chat and to do more for you and your community in the future. Honestly, I even felt very shy about writing this message. (/w\ )  Anyway, I wish you a best birthday ever!</p>
+<p style="text-align:right">ShyShroomRory</p></div>
+                <div class="nachricht" style="text-align: justify; white-space-collapse: collapse; padding: 4px 16px; display: none;">
+    <p style="text-align: center;">Happy Birthday Sayu!</p>
+    <p>On this blessed day, I wish you good health, happiness, a peaceful sky over your head, and that all your dreams come true! Its the first birthday of yours that I celebrate with you and the others Sincroknights! And I hope that we all will celebrate your birthday many more times together! \ (^w^)/</p>
+    <p>I never understood the concept of Oshi or KamiOshi before discovering you, but I can now say that Sayu Sincronisity is my KamiOshi. I never felt like part of a fandom or community before being welcomed by your community and now I can say that I am a Sincroknight.</p>
+    <p>I may not write a lot in chat but I watch all of the streams because you are so fun. I hope to overcome my shyness and write more in chat and to do more for you and your community in the future. Honestly, I even felt very shy about writing this message. (/w\ )  Anyway, I wish you a best birthday ever!</p>
+<p style="text-align:right">ShyShroomRory</p></div>
+                <div class="nachricht" style="text-align: justify; white-space-collapse: collapse; padding: 4px 16px; display: none;">
+    <p style="text-align: center;">Happy Birthday Sayu!</p>
+    <p>On this blessed day, I wish you good health, happiness, a peaceful sky over your head, and that all your dreams come true! Its the first birthday of yours that I celebrate with you and the others Sincroknights! And I hope that we all will celebrate your birthday many more times together! \ (^w^)/</p>
+    <p>I never understood the concept of Oshi or KamiOshi before discovering you, but I can now say that Sayu Sincronisity is my KamiOshi. I never felt like part of a fandom or community before being welcomed by your community and now I can say that I am a Sincroknight.</p>
+    <p>I may not write a lot in chat but I watch all of the streams because you are so fun. I hope to overcome my shyness and write more in chat and to do more for you and your community in the future. Honestly, I even felt very shy about writing this message. (/w\ )  Anyway, I wish you a best birthday ever!</p>
+<p style="text-align:right">ShyShroomRory</p></div>
+                <!-- Weitere Nachrichten hier hinzufügen -->
             </div>
-            <div class="message" id="message1">Hi partner, <br>Happy birthday🩵<br>I cannot believe it's already been a year since the start of our 69-day-long subathon. I followed you even before then but the subathon was the point of no return. It made me realize just how much I enjoyed your content, your personality, your humor, your company, everything. Back then, you started helping me push through all the hardships in my life, and you have continued to do so ever since then. On most days you are the main reason I even wake up.<br>The next few years are going to be some of the hardest in my life and the me from 2 years ago would be terrified. The present me isn't, however, because I know no matter what, I will get through them. And I know that because I watched you get through things 99% of people would completely fold at.<br>That's why I say you are not just my oshi but my hero, my inspiration, and my idol. As long as you'll let me, I will always follow you. Thank you for returning to us and thank you for staying with us. Now, please, stay with us for many, MANY more years to come. Love you, Sayu.<br>And again,<br>🩵HAPPY BIRTHDAY🩵 ~ Piprup</div>
-            <div class="message" id="message2">Happy Birthday Comrade!<br>I have to say that I'm really impressed with all the things you achieved despite all the struggles you've faced. The fact that we had so much in common and yet you're able to succeed where I couldn't, I really respect you for that. I'll have to thank you for being understanding and supportive. Also, do you know how cool, awesome and talented you are? From that angelic voice to that energy or vibe you give, that makes me want to achieve so much? That's one feat every human wished they could get. Oh I'm kinda envious and I wished I could be like you...<br>Well, I know I can't speak of the future but once I establish myself well enough, there are so many things I wanna do with you 💛. Till then, I'm wishing you a smooth sailing to your future endeavours and thank you for everything! 💛💛<br><br>With regards,<br>B_y3ll0w</div>
-            <div class="message" id="message3">Happy birthday Wayu you are one year older now which is still at the age of demand ~shinyaballz <img src='ressources/Sayu_we_like_older_woman_v5_sus.png'><button onclick="hideMessage('message3')">Close</button></div>
-            <div class="message" id="message4">Hi Sayu!<br>HAPPY BIRTHDAY!!! Hope you're having a lovely day, and that you treat yourself to something tasty.Though I can't watch your streams often, they put a smile on my face every time I'm able to pop in 🙂<br>Here's to another great year together!-Arne<br><img src='ressources/roEhzM8.png'><button onclick="hideMessage('message4')">Close</button></div>
-            <div class="message" id="message5">Hellooove! <br>HAPPY BIRTHDAY SAYU!! <br>This year has sure been a wild one for you, I wish nothing but the best for you, and your community! To many more years ahead,<br>ove 💛</div>
-            <div class="message" id="message6">Dear Sayu,<br>I first discovered you through the guy LM and  got curious, watched your stream and after that, the door to Knighthood... ahem  Sincroknighthood opened for me. <br>I really love your way of streaming, with personality, funny humor and varied content you do and a day with a stream leaves me in a happier mood so never stop doing in what you believe and achieve greatness! <br>Also the community is pretty open heartly and welcoming, sometimes pretty seiso or over the top but that speaks also for you getting nice and funny people united and together !<br>Also you are a criminal, a mischievous  thief inside the syndicate and if you're guilty of one crime it is: <br>For thieving our hearts 💕 <br></be>So happy birthday and have a great Subathon we the Sincroknights are always with ya through thick and thin and for many more good memories that last forever!<br> ~Midnight </div>
+            <button id="prevButton">Zurück</button>
+            <button id="nextButton">Weiter</button>
         </div>
-        </div>
-        </div>
-    </div>
+            
+        
 
     <div class="rotate-popup">
         <div class="rotate-popup-content">
@@ -295,6 +340,40 @@
         function hideMessage(messageId) {
             document.getElementById(messageId).style.display = 'none';
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleButton');
+            const nachrichtenFenster = document.getElementById('nachrichtenFenster');
+            const nachrichten = document.querySelectorAll('.nachricht');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+        
+            let currentIndex = 0;
+        
+            toggleButton.addEventListener('click', function() {
+                nachrichtenFenster.classList.toggle('hidden');
+                showNachricht(currentIndex);
+            });
+        
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : nachrichten.length - 1;
+                showNachricht(currentIndex);
+            });
+        
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex < nachrichten.length - 1) ? currentIndex + 1 : 0;
+                showNachricht(currentIndex);
+            });
+        
+            function showNachricht(index) {
+                nachrichten.forEach((nachricht, i) => {
+                    nachricht.classList.toggle('active', i === index);
+                });
+            }
+        });
+
+        
     </script>
+
 </body>
 </html>
