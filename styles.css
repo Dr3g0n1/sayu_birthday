@@ -242,7 +242,7 @@ body {
 }
 
 .nachricht {
-    display: block;
+    display: none;
     font-size: 18px;
 }
 
