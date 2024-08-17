@@ -30,4 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
             nachricht.classList.toggle('active', i === index);
         });
     }
-});
+})
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        function showMessage(messageId) {
+            document.getElementById(messageId).style.display = 'block';
+        }
+
+        function hideMessage(messageId) {
+            document.getElementById(messageId).style.display = 'none';
+        }
+    
+    ;
